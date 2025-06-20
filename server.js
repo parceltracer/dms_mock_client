@@ -85,7 +85,7 @@ app.post('/webhook', express.json({ verify: (req, res, buf) => { req.rawBody = b
     }
 
     // Replace this with your actual secret key
-    const secret = '20e2617e512c9dfb3515ec2848f4f253907d3a7dfdc822d1c7f5beefedb7719d';
+    const secret = '20e2617e512c9dfb3515ec2848f4f253907d3a7dfdc822d1c7f5beefedb7712d';
 
     // Calculate HMAC
     const expectedSignature = crypto
