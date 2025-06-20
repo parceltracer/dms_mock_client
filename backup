@@ -11,6 +11,7 @@ const app = express();
 
 // Middleware
 app.use(cors());
+app.use(express.json());
 
 // API Routes
 app.get('/api/hello', (req, res) => {
@@ -79,7 +80,7 @@ app.post('/webhook', express.json({ verify: (req, res, buf) => { req.rawBody = b
   try {
     const signatureHeader = req.headers['x-pt-webhook-signature'];
     console.log("Request headers:")
-    console.log(req.headers)
+    console.log(request.headers)
     if (!signatureHeader) {
       return res.status(401).json({ error: 'Missing signature header' });
     }
